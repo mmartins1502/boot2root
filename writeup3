@@ -1,0 +1,8 @@
+#Writeup 3
+
+En maintenant shift au lancement de la VM, on peut accéder aux options de boot. À partir d'ici, on lui precise sur quel media booter (live).
+On s'aperçoit qu'il n'y a pas de GRUB mais juste un bootloader basique.
+En cherchant un peu sur les failles communes on trouve:
+https://fr.wikipedia.org/wiki/Init
+
+Ainsi on boot avec live init=/bin/sh pour pouvoir ouvrir un shell root en tout premier.
